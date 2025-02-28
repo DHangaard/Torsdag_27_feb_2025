@@ -12,3 +12,5 @@ boolean isJobDone()
 {
     return jobsDone;    
 }
+
+// Added ";" line 7

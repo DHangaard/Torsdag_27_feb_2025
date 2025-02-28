@@ -1,20 +1,21 @@
 // 6.a
 int[][] board = new int[8][8];
 
-int sideLength = 40;
+int sideLength;
 
 // 6.b
 void setup() {
 
-  size(320, 320);
+  size(600, 600);
+  sideLength = width/8;
 
-  for (int i = 0; i < board.length; i++) {
+  for (int x = 0; x < board.length; x++) {
     println();
-    for (int j = 0; j < board[i].length; j++)
-      if ((i + j) % 2 == 0) {
-        board[i][j] = 0;
+    for (int y = 0; y < board[x].length; y++)
+      if ((x + y) % 2 == 0) {
+        board[x][y] = 0;
       } else {
-        board[i][j] = 1;
+        board[x][y] = 1;
       }
   }
 }
@@ -24,17 +25,17 @@ void draw() {
 
   background(255);
 
-  for (int i = 0; i < board.length; i++) {
-    for (int j = 0; j < board[i].length; j++) {
+  for (int x = 0; x < board.length; x++) {
+    for (int y = 0; y < board[x].length; y++) {
 
       // 6.d
-      if (board[i][j] == 0) {
+      if (board[x][y] == 0) {
         fill(0);
       } else {
         fill(255);
       }
 
-      rect(i * sideLength, j * sideLength, sideLength, sideLength);
+      rect(x * sideLength, y * sideLength, sideLength, sideLength);
     }
   }
 }

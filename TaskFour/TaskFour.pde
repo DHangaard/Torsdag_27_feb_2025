@@ -1,10 +1,10 @@
 // 4.b
 // 4.h
-Circle[] circles = new Circle[10];
+Circle[] circlesArr = new Circle[10];
 
 // 4.i
-int xPos;
-int yPos;
+float xPos;
+float yPos;
 
 // 4.a
 void setup() {
@@ -17,12 +17,12 @@ void setup() {
   c.display();
 
   // 4.i
-  for (int i = 0; i < circles.length; i++) {
-    xPos = (int) random(50, width-50); // Random xPos
-    yPos = (int) random(50, height-50); // Random yPos
+  for (int i = 0; i < circlesArr.length; i++) {
+    xPos = random(50, width-50); // Random xPos
+    yPos = random(50, height-50); // Random yPos
 
     // 4.j
-    circles[i] = new Circle(xPos, yPos);
+    circlesArr[i] = new Circle(xPos, yPos);
   }
 }
 
@@ -30,7 +30,7 @@ void draw() {
   background(255);
 
   // 4.l
-  for (Circle e : circles) {
+  for (Circle e : circlesArr) {
     e.move();
   }
 }

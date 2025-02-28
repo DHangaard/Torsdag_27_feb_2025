@@ -21,7 +21,9 @@ boolean isValueGreaterThanThreshold(int value, int threshold)
   }
 }
 
-  boolean isJobDone()
-  {
-    return jobsDone;
-  }
+boolean isJobDone()
+{
+  return jobsDone;
+}
+
+// Added else statement line 19

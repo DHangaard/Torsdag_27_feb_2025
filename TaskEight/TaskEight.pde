@@ -6,7 +6,7 @@ void setup() {
 
   // Print initial array
   println(arr);
-  println(); // emprty line
+  println(); // empty line
   
   // Sort array
   bubbleSort(arr);
@@ -15,8 +15,13 @@ void setup() {
   println(arr);
 }
 
+
+
 void bubbleSort(int[] arr) {
 
+  
+  // {0, 1, 2, 3, 4, 5}
+  
   for (int i = 0; i < arr.length - 1; i++) {
     for (int j = 0; j < arr.length - i - 1; j++) {
       

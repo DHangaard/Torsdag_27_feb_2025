@@ -22,12 +22,17 @@ hasDriversLicense.add(false);
 
 // 7.b
 printName(name);
+println(); // Empty line
 
 // 7.c
-sumOfAllElements(age);
+int sum = sumOfAllElements(age);
+println("sum of all ages: " + sum);
+println(); // Empty line
 
 // 7.d
-averageOfAllElements(age);
+int average = averageOfAllElements(age);
+println("average age: " + average);
+println(); // Empty line
 
 }
 
@@ -38,20 +43,17 @@ void printName(ArrayList <String> arrList) {
 }
 
 // 7.c
-void sumOfAllElements(ArrayList <Integer> arrList) {
+int sumOfAllElements(ArrayList <Integer> arrList) {
     int sum = 0;
     for (int i = 0; i < arrList.size(); i++){
     sum += arrList.get(i);
     }
-    println(sum);
+    return sum;
 }
 
 // 7.d
-void averageOfAllElements(ArrayList <Integer> arrList) {
-    int sum = 0;
-    for (int i = 0; i < arrList.size(); i++){
-    sum += arrList.get(i);
-    }
+int averageOfAllElements(ArrayList <Integer> arrList) {
+    int sum = sumOfAllElements(arrList);
     sum = sum/arrList.size();
-    println(sum);
+    return sum;
 }

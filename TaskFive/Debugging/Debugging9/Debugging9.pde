@@ -25,3 +25,5 @@ int getSumOfAllElementsInArray(int[] arr)
     }
     return sum;
 }
+
+// Removed "=" from operator in for loop line 22

@@ -1,17 +1,23 @@
 // 2.c does not exist
 
+
 // 2.b
 void setup() {
   printPartOfWord("Pepperoni Pizza!", 10, 15);
+  println(); // Empty line
+
+  // 2.d
   printLastPartOfWord("Only print these: ABCD");
+  println(); // Empty line
+
+  printLastPartOfWord("ABCD");
+  println(); // Empty line
 
   // 2.e
   printPartOfWord("ABCDE", -1, 4);
-  
-  // 2.e
-  println();
-  println();
 }
+
+
 
 // 2.a
 void printPartOfWord(String partOfWord, int beginIndex, int endIndex) {
@@ -23,21 +29,34 @@ void printPartOfWord(String partOfWord, int beginIndex, int endIndex) {
     println(partOfWord.substring(beginIndex, endIndex));
   }
 }
+
+
+
 // 2.d
 void printLastPartOfWord(String lastPartOfWord) {
   if (lastPartOfWord.length() < 5) {
     println("Word must consist of at least five characters");
-  }
+  } else {
 
-  String newWord;
-  newWord = lastPartOfWord.substring(lastPartOfWord.length()-4);
-  println(newWord);
+    String newWord;
+    newWord = lastPartOfWord.substring(lastPartOfWord.length()-4);
+    println(newWord);
+  }
 }
 
+
+
+
+
+
+
+
+
+
 void errorMessage() {
-  println("ERROR!");
-  println("beginIndex cannot be less than zero");
-  println("enIndex cannot be greater than length of String");
-  println("baginnerIndex cannot be greater than endIndex");
-  println("Try again...");
+  print("ERROR!\n");
+  print("beginIndex cannot be less than zero\n");
+  print("endIndex cannot be greater than length of String\n");
+  print("baginIndex cannot be greater than endIndex\n");
+  print("Try again...\n");
 }

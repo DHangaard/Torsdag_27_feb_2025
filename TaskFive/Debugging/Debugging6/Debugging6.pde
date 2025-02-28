@@ -19,3 +19,5 @@ int getRandomNumber(int min, int max)
 {
     return (int) random(min, max);
 }
+
+// Cast random function to return int line 20

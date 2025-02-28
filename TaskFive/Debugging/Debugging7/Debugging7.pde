@@ -25,3 +25,5 @@ boolean isJobDone()
 {
     return jobsDone;    
 }
+
+// Declare and initialize variable sum line 16

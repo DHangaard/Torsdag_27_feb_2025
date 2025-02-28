@@ -2,16 +2,18 @@
 class Circle {
 
   // Attributes
-  int xPos;
-  int yPos;
-  int speed;
+  float xPos;
+  float yPos;
+  float speed;
+  int circleSize;
 
   // Constructor
   // 4.d
-  Circle(int xPos, int yPos) {
+  Circle(float xPos, float yPos) {
     this.xPos = xPos;
     this.yPos = yPos;
-    speed = 1;
+    speed = .25;
+    circleSize = 50;
   }
 
   // Method
@@ -20,21 +22,25 @@ class Circle {
     strokeWeight(2);
     stroke(0);
     noFill();
-    ellipse(xPos, yPos, 50, 50);
+    ellipse(xPos, yPos, circleSize, circleSize);
   }
 
   // 4.k
   void move() {
-    for (int i = 0; i < circles.length; i++) {
+    for (int i = 0; i < circlesArr.length; i++) {
 
-      if (xPos < 50 || xPos > (width-50)|| yPos < 50 || yPos > (height-50)) {
-        speed = speed * -1;
+      if (xPos < circleSize/2 || 
+          xPos > (width-circleSize/2)|| 
+          yPos < circleSize/2 || 
+          yPos > (height-circleSize/2)) {
+        
+            speed = speed * -1;
       }
 
       xPos += speed;
       yPos += speed;
 
-      display();
+      this.display();
     }
   }
 }
